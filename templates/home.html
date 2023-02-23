@@ -1,55 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jovian Careers</title>
-    <style>
-      h1 {
-        font-family: Roboto;
-        font-size: 40px;
-        font-weight: normal;
-        color: rgb(100,100,100); 
-        text-align: center;
-      }
-
-      h2 {
-        font-family: Roboto;
-        font-size: 32px;
-        font-weight: normal;
-        color: rgb(100,100,100);
-        text-align: center;
-      }
-
-      .bodytext {
-        font-family: Roboto;
-        color: rgb(80,80,80);
-      }
-
-      #banner {
-        width: 100%;
-        height: 360px;
-        object-fit: cover;
-      }
-
-      #container {
-        max-width: 720px;
-        margin: 0 auto;
-      }
-    </style>
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='flaskicon.ico') }}">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+   <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='flaskicon.ico') }}">
   </head>
   <body>
-      <div id="container">
-      <h1>Jovian Openings</h1>
-      <img id="banner" src="{{ url_for('static', filename='banner.jpg') }}" alt="Inspirational message saying this is the sign you've been looking for." height="320">
-      <h2>About Jovian</h2>
-      <p class="bodytext">
+      <div class="container">
+      <h1 class="text-center mt-2 mb-4">Jovian Careers</h1>
+      <img class="img-fluid" src="{{ url_for('static', filename='banner.jpg') }}" alt="Inspirational message saying this is the sign you've been looking for.">
+      <h2 class="text-center">About Jovian</h2>
+      <p class="lead">
   Jovian is an AI company that develops advanced solutions to complex problems. They have a team of expert data scientists, machine learning engineers, and software developers who build innovative AI solutions for businesses. Jovian values diversity and inclusivity in their workplace and actively seeks out candidates from diverse backgrounds. They are dedicated to making a positive impact on the world through the power of AI.</p>
-      <h2>Open Positions</h2>
-      <p class="bodytext">TODO - show the jobs here</p>
-      <div style="text-align:center;">
-        <button>Contact Us</button>
-        
+      <h2 class="text-center">Open Positions</h2>
+      <p>TODO - show the jobs here</p>
+      <div class="text-center">
+        <button class="btn btn-primary btn-lg">Contact Us</button> 
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   </body>
 </html>
