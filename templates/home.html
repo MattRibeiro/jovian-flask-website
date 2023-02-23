@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jovian Careers</title>
+    <style>
+      h1 {
+        font-family: Roboto;
+        font-size: 40px;
+        font-weight: normal;
+        color: rgb(100,100,100); 
+        text-align: center;
+      }
+
+      h2 {
+        font-family: Roboto;
+        font-size: 32px;
+        font-weight: normal;
+        color: rgb(100,100,100);
+        text-align: center;
+      }
+
+      .bodytext {
+        font-family: Roboto;
+        color: rgb(80,80,80);
+      }
+
+      #banner {
+        width: 100%;
+        height: 360px;
+        object-fit: cover;
+      }
+
+      #container {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+    </style>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='flaskicon.ico') }}">
+  </head>
+  <body>
+      <div id="container">
+      <h1>Jovian Openings</h1>
+      <img id="banner" src="{{ url_for('static', filename='banner.jpg') }}" alt="Inspirational message saying this is the sign you've been looking for." height="320">
+      <h2>About Jovian</h2>
+      <p class="bodytext">
+  Jovian is an AI company that develops advanced solutions to complex problems. They have a team of expert data scientists, machine learning engineers, and software developers who build innovative AI solutions for businesses. Jovian values diversity and inclusivity in their workplace and actively seeks out candidates from diverse backgrounds. They are dedicated to making a positive impact on the world through the power of AI.</p>
+      <h2>Open Positions</h2>
+      <p class="bodytext">TODO - show the jobs here</p>
+      <div style="text-align:center;">
+        <button>Contact Us</button>
+        
+      </div>
+    </div>
+  </body>
+</html>
