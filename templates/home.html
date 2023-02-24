@@ -9,13 +9,17 @@
   </head>
   <body>
       <div class="container">
-      <h1 class="text-center mt-2 mb-4">Jovian Careers</h1>
+      <h1 class="text-center mt-2 mb-4">{{company}} Careers</h1>
       <img class="img-fluid" src="{{ url_for('static', filename='banner.jpg') }}" alt="Inspirational message saying this is the sign you've been looking for.">
       <h2 class="text-center">About Jovian</h2>
       <p class="lead">
   Jovian is an AI company that develops advanced solutions to complex problems. They have a team of expert data scientists, machine learning engineers, and software developers who build innovative AI solutions for businesses. Jovian values diversity and inclusivity in their workplace and actively seeks out candidates from diverse backgrounds. They are dedicated to making a positive impact on the world through the power of AI.</p>
       <h2 class="text-center">Open Positions</h2>
-      <p>TODO - show the jobs here</p>
+      <div>
+        {% for job in jobs %}
+          {% include 'jobitem.html' %}
+        {% endfor %}
+      </div>
       <div class="text-center">
         <button class="btn btn-primary btn-lg">Contact Us</button> 
       </div>
