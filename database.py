@@ -5,9 +5,18 @@ import json, os
 def sqlresults_to_dict(results):
   return [dict(record._mapping) for record in results]
 
+def load_job_from_db(id):
+  with engine.connect() as conn:
+    result = conn.execute(text(f"SELECT * FROM jobs WHERE id = {id}"))
+    rows = sqlresults_to_dict(result.all())
+    if len(rows) == 0:
+      return None
+    else:
+      return rows[0]
+    
 def load_jobs_from_db():
   with engine.connect() as conn:
-    result = conn.execute(text("select * FROM jobs;"))
+    result = conn.execute(text("SELECT * FROM jobs;"))
     return sqlresults_to_dict(result.all())
 
 # DB_CONNECT_DATA schema:

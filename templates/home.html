@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jovian Careers</title>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    {% include 'bootstrap.html' %}
    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='flaskicon.ico') }}">
   </head>
   <body>
-      <div class="container">
-      <h1 class="text-center mt-2 mb-4">{{company}} Careers</h1>
-      <img class="img-fluid" src="{{ url_for('static', filename='banner.jpg') }}" alt="Inspirational message saying this is the sign you've been looking for.">
-      <h2 class="text-center">About Jovian</h2>
+    {% include 'nav.html' %}
+    {% include 'banner.html' %}
+    <div class="container">    
+      <h1 class="text-center mt-2 mb-4">Jovian Careers</h1>
       <p class="lead">
   Jovian is an AI company that develops advanced solutions to complex problems. They have a team of expert data scientists, machine learning engineers, and software developers who build innovative AI solutions for businesses. Jovian values diversity and inclusivity in their workplace and actively seeks out candidates from diverse backgrounds. They are dedicated to making a positive impact on the world through the power of AI.</p>
       <h2 class="text-center">Open Positions</h2>
@@ -24,6 +22,7 @@
         <button class="btn btn-primary btn-lg">Contact Us</button> 
       </div>
     </div>
+    {% include 'footer.html' %}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   </body>
 </html>
